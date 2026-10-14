@@ -1,0 +1,1002 @@
+{
+  "generated_at": "2026-10-14T17:25:29.803988+00:00",
+  "targets": {
+    "username": "johndoe",
+    "domain": "example.com",
+    "phone": "+34 612345678",
+    "email": "johndoe@example.com",
+    "name": "John Doe"
+  },
+  "results": {
+    "username_lookup": {
+      "source": "Sherlock",
+      "status": "ok",
+      "username": "johndoe",
+      "profiles_found": 213,
+      "profiles": [
+        {
+          "site": "9GAG",
+          "url": "https://www.9gag.com/u/johndoe"
+        },
+        {
+          "site": "About.me",
+          "url": "https://about.me/johndoe"
+        },
+        {
+          "site": "Airbit",
+          "url": "https://airbit.com/johndoe"
+        },
+        {
+          "site": "AllMyLinks",
+          "url": "https://allmylinks.com/johndoe"
+        },
+        {
+          "site": "AniWorld",
+          "url": "https://aniworld.to/user/profil/johndoe"
+        },
+        {
+          "site": "Anilist",
+          "url": "https://anilist.co/user/johndoe/"
+        },
+        {
+          "site": "Aparat",
+          "url": "https://www.aparat.com/johndoe/"
+        },
+        {
+          "site": "Asciinema",
+          "url": "https://asciinema.org/~johndoe"
+        },
+        {
+          "site": "Atcoder",
+          "url": "https://atcoder.jp/users/johndoe"
+        },
+        {
+          "site": "Vjudge",
+          "url": "https://VJudge.net/user/johndoe"
+        },
+        {
+          "site": "Audiojungle",
+          "url": "https://audiojungle.net/user/johndoe"
+        },
+        {
+          "site": "AWS Skills Profile",
+          "url": "https://skillsprofile.skillbuilder.aws/user/johndoe/"
+        },
+        {
+          "site": "Behance",
+          "url": "https://www.behance.net/johndoe"
+        },
+        {
+          "site": "Bluesky",
+          "url": "https://bsky.app/profile/johndoe.bsky.social"
+        },
+        {
+          "site": "BoardGameGeek",
+          "url": "https://boardgamegeek.com/user/johndoe"
+        },
+        {
+          "site": "BraveCommunity",
+          "url": "https://community.brave.com/u/johndoe/"
+        },
+        {
+          "site": "BuyMeACoffee",
+          "url": "https://buymeacoff.ee/johndoe"
+        },
+        {
+          "site": "Cfx.re Forum",
+          "url": "https://forum.cfx.re/u/johndoe/summary"
+        },
+        {
+          "site": "CGTrader",
+          "url": "https://www.cgtrader.com/johndoe"
+        },
+        {
+          "site": "Carbonmade",
+          "url": "https://johndoe.carbonmade.com"
+        },
+        {
+          "site": "Carrd",
+          "url": "https://johndoe.carrd.co/"
+        },
+        {
+          "site": "Chess",
+          "url": "https://www.chess.com/member/johndoe"
+        },
+        {
+          "site": "Codeberg",
+          "url": "https://codeberg.org/johndoe"
+        },
+        {
+          "site": "Codecademy",
+          "url": "https://www.codecademy.com/profiles/johndoe"
+        },
+        {
+          "site": "Codechef",
+          "url": "https://www.codechef.com/users/johndoe"
+        },
+        {
+          "site": "Codeforces",
+          "url": "https://codeforces.com/profile/johndoe"
+        },
+        {
+          "site": "Coderwall",
+          "url": "https://coderwall.com/johndoe"
+        },
+        {
+          "site": "Codewars",
+          "url": "https://www.codewars.com/users/johndoe"
+        },
+        {
+          "site": "Coroflot",
+          "url": "https://www.coroflot.com/johndoe"
+        },
+        {
+          "site": "Cplusplus",
+          "url": "https://cplusplus.com/user/johndoe"
+        },
+        {
+          "site": "Cracked Forum",
+          "url": "https://cracked.ax/johndoe"
+        },
+        {
+          "site": "Crevado",
+          "url": "https://johndoe.crevado.com"
+        },
+        {
+          "site": "Crowdin",
+          "url": "https://crowdin.com/profile/johndoe"
+        },
+        {
+          "site": "CryptoHack",
+          "url": "https://cryptohack.org/user/johndoe/"
+        },
+        {
+          "site": "Cryptomator Forum",
+          "url": "https://community.cryptomator.org/u/johndoe"
+        },
+        {
+          "site": "DEV Community",
+          "url": "https://dev.to/johndoe"
+        },
+        {
+          "site": "DailyMotion",
+          "url": "https://www.dailymotion.com/johndoe"
+        },
+        {
+          "site": "Dealabs",
+          "url": "https://www.dealabs.com/profile/johndoe"
+        },
+        {
+          "site": "Discord",
+          "url": "https://discord.com"
+        },
+        {
+          "site": "Discuss.Elastic.co",
+          "url": "https://discuss.elastic.co/u/johndoe"
+        },
+        {
+          "site": "Disqus",
+          "url": "https://disqus.com/johndoe"
+        },
+        {
+          "site": "Docker Hub",
+          "url": "https://hub.docker.com/u/johndoe/"
+        },
+        {
+          "site": "Dribbble",
+          "url": "https://dribbble.com/johndoe"
+        },
+        {
+          "site": "Duolingo",
+          "url": "https://www.duolingo.com/profile/johndoe"
+        },
+        {
+          "site": "Eintracht Frankfurt Forum",
+          "url": "https://community.eintracht.de/fans/johndoe"
+        },
+        {
+          "site": "Empretienda AR",
+          "url": "https://johndoe.empretienda.com.ar"
+        },
+        {
+          "site": "Exposure",
+          "url": "https://johndoe.exposure.co/"
+        },
+        {
+          "site": "exophase",
+          "url": "https://www.exophase.com/user/johndoe/"
+        },
+        {
+          "site": "F3.cool",
+          "url": "https://f3.cool/johndoe/"
+        },
+        {
+          "site": "Fameswap",
+          "url": "https://fameswap.com/user/johndoe"
+        },
+        {
+          "site": "Flightradar24",
+          "url": "https://my.flightradar24.com/johndoe"
+        },
+        {
+          "site": "Flipboard",
+          "url": "https://flipboard.com/@johndoe"
+        },
+        {
+          "site": "Fosstodon",
+          "url": "https://fosstodon.org/@johndoe"
+        },
+        {
+          "site": "Freelancer",
+          "url": "https://www.freelancer.com/u/johndoe"
+        },
+        {
+          "site": "Freesound",
+          "url": "https://freesound.org/people/johndoe/"
+        },
+        {
+          "site": "Genius (Artists)",
+          "url": "https://genius.com/artists/johndoe"
+        },
+        {
+          "site": "Genius (Users)",
+          "url": "https://genius.com/johndoe"
+        },
+        {
+          "site": "GitBook",
+          "url": "https://johndoe.gitbook.io/"
+        },
+        {
+          "site": "GitHub",
+          "url": "https://www.github.com/johndoe"
+        },
+        {
+          "site": "Warframe Market",
+          "url": "https://warframe.market/profile/johndoe"
+        },
+        {
+          "site": "GitLab",
+          "url": "https://gitlab.com/johndoe"
+        },
+        {
+          "site": "Gitee",
+          "url": "https://gitee.com/johndoe"
+        },
+        {
+          "site": "GoodReads",
+          "url": "https://www.goodreads.com/johndoe"
+        },
+        {
+          "site": "Grailed",
+          "url": "https://www.grailed.com/johndoe"
+        },
+        {
+          "site": "Gumroad",
+          "url": "https://www.gumroad.com/johndoe"
+        },
+        {
+          "site": "Hackaday",
+          "url": "https://hackaday.io/johndoe"
+        },
+        {
+          "site": "HackenProof (Hackers)",
+          "url": "https://hackenproof.com/hackers/johndoe"
+        },
+        {
+          "site": "HackerEarth",
+          "url": "https://hackerearth.com/@johndoe"
+        },
+        {
+          "site": "HackerOne",
+          "url": "https://hackerone.com/johndoe"
+        },
+        {
+          "site": "HackerRank",
+          "url": "https://hackerrank.com/johndoe"
+        },
+        {
+          "site": "HackerSploit",
+          "url": "https://forum.hackersploit.org/u/johndoe"
+        },
+        {
+          "site": "HackMD",
+          "url": "https://hackmd.io/@johndoe"
+        },
+        {
+          "site": "HubPages",
+          "url": "https://hubpages.com/@johndoe"
+        },
+        {
+          "site": "HudsonRock",
+          "url": "https://cavalier.hudsonrock.com/api/json/v2/osint-tools/search-by-username?username=johndoe"
+        },
+        {
+          "site": "Hugging Face",
+          "url": "https://huggingface.co/johndoe"
+        },
+        {
+          "site": "IFTTT",
+          "url": "https://www.ifttt.com/p/johndoe"
+        },
+        {
+          "site": "Ifunny",
+          "url": "https://ifunny.co/user/johndoe"
+        },
+        {
+          "site": "Imgur",
+          "url": "https://imgur.com/user/johndoe"
+        },
+        {
+          "site": "imood",
+          "url": "https://www.imood.com/users/johndoe"
+        },
+        {
+          "site": "Ionic Forum",
+          "url": "https://forum.ionicframework.com/u/johndoe"
+        },
+        {
+          "site": "Issuu",
+          "url": "https://issuu.com/johndoe"
+        },
+        {
+          "site": "Itch.io",
+          "url": "https://johndoe.itch.io/"
+        },
+        {
+          "site": "Itemfix",
+          "url": "https://www.itemfix.com/c/johndoe"
+        },
+        {
+          "site": "Jellyfin Weblate",
+          "url": "https://translate.jellyfin.org/user/johndoe/"
+        },
+        {
+          "site": "Joplin Forum",
+          "url": "https://discourse.joplinapp.org/u/johndoe"
+        },
+        {
+          "site": "kaskus",
+          "url": "https://www.kaskus.co.id/@johndoe"
+        },
+        {
+          "site": "Keybase",
+          "url": "https://keybase.io/johndoe"
+        },
+        {
+          "site": "Kick",
+          "url": "https://kick.com/johndoe"
+        },
+        {
+          "site": "Kongregate",
+          "url": "https://www.kongregate.com/accounts/johndoe"
+        },
+        {
+          "site": "Kvinneguiden",
+          "url": "https://forum.kvinneguiden.no"
+        },
+        {
+          "site": "LOR",
+          "url": "https://www.linux.org.ru/people/johndoe/profile"
+        },
+        {
+          "site": "Laracast",
+          "url": "https://laracasts.com/@johndoe"
+        },
+        {
+          "site": "Launchpad",
+          "url": "https://launchpad.net/~johndoe"
+        },
+        {
+          "site": "Lichess",
+          "url": "https://lichess.org/@/johndoe"
+        },
+        {
+          "site": "Listed",
+          "url": "https://listed.to/@johndoe"
+        },
+        {
+          "site": "Mamot",
+          "url": "https://mamot.fr/@johndoe"
+        },
+        {
+          "site": "Medium",
+          "url": "https://medium.com/@johndoe"
+        },
+        {
+          "site": "Memrise",
+          "url": "https://www.memrise.com/user/johndoe/"
+        },
+        {
+          "site": "MixCloud",
+          "url": "https://www.mixcloud.com/johndoe/"
+        },
+        {
+          "site": "Monkeytype",
+          "url": "https://monkeytype.com/profile/johndoe"
+        },
+        {
+          "site": "MyAnimeList",
+          "url": "https://myanimelist.net/profile/johndoe"
+        },
+        {
+          "site": "MyMiniFactory",
+          "url": "https://www.myminifactory.com/users/johndoe"
+        },
+        {
+          "site": "Myspace",
+          "url": "https://myspace.com/johndoe"
+        },
+        {
+          "site": "Naver",
+          "url": "https://blog.naver.com/johndoe"
+        },
+        {
+          "site": "NitroType",
+          "url": "https://www.nitrotype.com/racer/johndoe"
+        },
+        {
+          "site": "Nyaa.si",
+          "url": "https://nyaa.si/user/johndoe"
+        },
+        {
+          "site": "OpenGameArt",
+          "url": "https://opengameart.org/users/johndoe"
+        },
+        {
+          "site": "OpenStreetMap",
+          "url": "https://www.openstreetmap.org/user/johndoe"
+        },
+        {
+          "site": "Pastebin",
+          "url": "https://pastebin.com/u/johndoe"
+        },
+        {
+          "site": "Patreon",
+          "url": "https://www.patreon.com/johndoe"
+        },
+        {
+          "site": "HotUKdeals",
+          "url": "https://www.hotukdeals.com/profile/johndoe"
+        },
+        {
+          "site": "Mydealz",
+          "url": "https://www.mydealz.de/profile/johndoe"
+        },
+        {
+          "site": "Chollometro",
+          "url": "https://www.chollometro.com/profile/johndoe"
+        },
+        {
+          "site": "PepperNL",
+          "url": "https://nl.pepper.com/profile/johndoe"
+        },
+        {
+          "site": "PepperPL",
+          "url": "https://www.pepper.pl/profile/johndoe"
+        },
+        {
+          "site": "PepperealsUS",
+          "url": "https://www.pepperdeals.com/profile/johndoe"
+        },
+        {
+          "site": "Promodescuentos",
+          "url": "https://www.promodescuentos.com/profile/johndoe"
+        },
+        {
+          "site": "Periscope",
+          "url": "https://www.periscope.tv/johndoe/"
+        },
+        {
+          "site": "pixelfed.social",
+          "url": "https://pixelfed.social/johndoe/"
+        },
+        {
+          "site": "Plurk",
+          "url": "https://www.plurk.com/johndoe"
+        },
+        {
+          "site": "Pokemon Showdown",
+          "url": "https://pokemonshowdown.com/users/johndoe"
+        },
+        {
+          "site": "PromoDJ",
+          "url": "http://promodj.com/johndoe"
+        },
+        {
+          "site": "Pronouns.page",
+          "url": "https://pronouns.page/@johndoe"
+        },
+        {
+          "site": "Rajce.net",
+          "url": "https://johndoe.rajce.idnes.cz/"
+        },
+        {
+          "site": "Rclone Forum",
+          "url": "https://forum.rclone.org/u/johndoe"
+        },
+        {
+          "site": "Replit.com",
+          "url": "https://replit.com/@johndoe"
+        },
+        {
+          "site": "SWAPD",
+          "url": "https://swapd.co/u/johndoe"
+        },
+        {
+          "site": "Scratch",
+          "url": "https://scratch.mit.edu/users/johndoe"
+        },
+        {
+          "site": "SEOForum",
+          "url": "https://seoforum.com/@johndoe"
+        },
+        {
+          "site": "Signal",
+          "url": "https://community.signalusers.org/u/johndoe"
+        },
+        {
+          "site": "Sketchfab",
+          "url": "https://sketchfab.com/johndoe"
+        },
+        {
+          "site": "Slides",
+          "url": "https://slides.com/johndoe"
+        },
+        {
+          "site": "Snapchat",
+          "url": "https://www.snapchat.com/add/johndoe"
+        },
+        {
+          "site": "SOOP",
+          "url": "https://www.sooplive.co.kr/station/johndoe"
+        },
+        {
+          "site": "SoundCloud",
+          "url": "https://soundcloud.com/johndoe"
+        },
+        {
+          "site": "SpaceHey",
+          "url": "https://spacehey.com/johndoe"
+        },
+        {
+          "site": "SpeakerDeck",
+          "url": "https://speakerdeck.com/johndoe"
+        },
+        {
+          "site": "Speedrun.com",
+          "url": "https://speedrun.com/users/johndoe"
+        },
+        {
+          "site": "Star Citizen",
+          "url": "https://robertsspaceindustries.com/citizens/johndoe"
+        },
+        {
+          "site": "Steam Community (Group)",
+          "url": "https://steamcommunity.com/groups/johndoe"
+        },
+        {
+          "site": "Steam Community (User)",
+          "url": "https://steamcommunity.com/id/johndoe/"
+        },
+        {
+          "site": "Strava",
+          "url": "https://www.strava.com/athletes/johndoe"
+        },
+        {
+          "site": "Substack",
+          "url": "https://johndoe.substack.com/"
+        },
+        {
+          "site": "SublimeForum",
+          "url": "https://forum.sublimetext.com/u/johndoe"
+        },
+        {
+          "site": "TETR.IO",
+          "url": "https://ch.tetr.io/u/johndoe"
+        },
+        {
+          "site": "TheMovieDB",
+          "url": "https://www.themoviedb.org/u/johndoe"
+        },
+        {
+          "site": "TikTok",
+          "url": "https://www.tiktok.com/@johndoe"
+        },
+        {
+          "site": "Tiendanube",
+          "url": "https://johndoe.mitiendanube.com/"
+        },
+        {
+          "site": "Topmate",
+          "url": "https://topmate.io/johndoe"
+        },
+        {
+          "site": "Telegram",
+          "url": "https://t.me/johndoe"
+        },
+        {
+          "site": "Tellonym.me",
+          "url": "https://tellonym.me/johndoe"
+        },
+        {
+          "site": "Tenor",
+          "url": "https://tenor.com/users/johndoe"
+        },
+        {
+          "site": "Terraria Forums",
+          "url": "https://forums.terraria.org/index.php?search/42798315/&c[users]=johndoe&o=relevance"
+        },
+        {
+          "site": "tistory",
+          "url": "https://johndoe.tistory.com/"
+        },
+        {
+          "site": "TradingView",
+          "url": "https://www.tradingview.com/u/johndoe/"
+        },
+        {
+          "site": "TrashboxRU",
+          "url": "https://trashbox.ru/users/johndoe"
+        },
+        {
+          "site": "Trawelling",
+          "url": "https://traewelling.de/@johndoe"
+        },
+        {
+          "site": "Trello",
+          "url": "https://trello.com/johndoe"
+        },
+        {
+          "site": "Tuna",
+          "url": "https://tuna.voicemod.net/user/johndoe"
+        },
+        {
+          "site": "Twitch",
+          "url": "https://www.twitch.tv/johndoe"
+        },
+        {
+          "site": "Typeracer",
+          "url": "https://data.typeracer.com/pit/profile?user=johndoe"
+        },
+        {
+          "site": "Ultimate-Guitar",
+          "url": "https://ultimate-guitar.com/u/johndoe"
+        },
+        {
+          "site": "Untappd",
+          "url": "https://untappd.com/user/johndoe"
+        },
+        {
+          "site": "VK",
+          "url": "https://vk.com/johndoe"
+        },
+        {
+          "site": "Venmo",
+          "url": "https://account.venmo.com/u/johndoe"
+        },
+        {
+          "site": "Vimeo",
+          "url": "https://vimeo.com/johndoe"
+        },
+        {
+          "site": "VirusTotal",
+          "url": "https://www.virustotal.com/gui/user/johndoe"
+        },
+        {
+          "site": "VLR",
+          "url": "https://www.vlr.gg/user/johndoe"
+        },
+        {
+          "site": "Warrior Forum",
+          "url": "https://www.warriorforum.com/members/johndoe.html"
+        },
+        {
+          "site": "Wattpad",
+          "url": "https://www.wattpad.com/user/johndoe"
+        },
+        {
+          "site": "Weebly",
+          "url": "https://johndoe.weebly.com/"
+        },
+        {
+          "site": "Wikidot",
+          "url": "http://www.wikidot.com/user:info/johndoe"
+        },
+        {
+          "site": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Special:CentralAuth/johndoe?uselang=qqx"
+        },
+        {
+          "site": "WordPress",
+          "url": "https://johndoe.wordpress.com/"
+        },
+        {
+          "site": "WordPressOrg",
+          "url": "https://profiles.wordpress.org/johndoe/"
+        },
+        {
+          "site": "Wordnik",
+          "url": "https://www.wordnik.com/users/johndoe"
+        },
+        {
+          "site": "Wykop",
+          "url": "https://www.wykop.pl/ludzie/johndoe"
+        },
+        {
+          "site": "Xbox Gamertag",
+          "url": "https://xboxgamertag.com/search/johndoe"
+        },
+        {
+          "site": "YouNow",
+          "url": "https://www.younow.com/johndoe/"
+        },
+        {
+          "site": "YouTube",
+          "url": "https://www.youtube.com/@johndoe"
+        },
+        {
+          "site": "akniga",
+          "url": "https://akniga.org/profile/johndoe"
+        },
+        {
+          "site": "couchsurfing",
+          "url": "https://www.couchsurfing.com/people/johndoe"
+        },
+        {
+          "site": "d3RU",
+          "url": "https://d3.ru/user/johndoe/posts"
+        },
+        {
+          "site": "datingRU",
+          "url": "http://dating.ru/johndoe"
+        },
+        {
+          "site": "devRant",
+          "url": "https://devrant.com/users/johndoe"
+        },
+        {
+          "site": "eintracht",
+          "url": "https://community.eintracht.de/fans/johndoe"
+        },
+        {
+          "site": "fl",
+          "url": "https://www.fl.ru/users/johndoe"
+        },
+        {
+          "site": "furaffinity",
+          "url": "https://www.furaffinity.net/user/johndoe"
+        },
+        {
+          "site": "geocaching",
+          "url": "https://www.geocaching.com/p/default.aspx?u=johndoe"
+        },
+        {
+          "site": "habr",
+          "url": "https://habr.com/ru/users/johndoe"
+        },
+        {
+          "site": "hackster",
+          "url": "https://www.hackster.io/johndoe"
+        },
+        {
+          "site": "jbzd.com.pl",
+          "url": "https://jbzd.com.pl/uzytkownik/johndoe"
+        },
+        {
+          "site": "jeuxvideo",
+          "url": "https://www.jeuxvideo.com/profil/johndoe"
+        },
+        {
+          "site": "kofi",
+          "url": "https://ko-fi.com/johndoe"
+        },
+        {
+          "site": "kwork",
+          "url": "https://kwork.ru/user/johndoe"
+        },
+        {
+          "site": "leasehackr",
+          "url": "https://forum.leasehackr.com/u/johndoe/summary/"
+        },
+        {
+          "site": "livelib",
+          "url": "https://www.livelib.ru/reader/johndoe"
+        },
+        {
+          "site": "mastodon.social",
+          "url": "https://mastodon.social/@johndoe"
+        },
+        {
+          "site": "mastodon.xyz",
+          "url": "https://mastodon.xyz/@johndoe"
+        },
+        {
+          "site": "mstdn.social",
+          "url": "https://mstdn.social/@johndoe"
+        },
+        {
+          "site": "minds",
+          "url": "https://www.minds.com/johndoe/"
+        },
+        {
+          "site": "n8n Community",
+          "url": "https://community.n8n.io/u/johndoe/summary"
+        },
+        {
+          "site": "note",
+          "url": "https://note.com/johndoe"
+        },
+        {
+          "site": "osu!",
+          "url": "https://osu.ppy.sh/users/johndoe"
+        },
+        {
+          "site": "pikabu",
+          "url": "https://pikabu.ru/@johndoe"
+        },
+        {
+          "site": "Pinterest",
+          "url": "https://www.pinterest.com/johndoe/"
+        },
+        {
+          "site": "pr0gramm",
+          "url": "https://pr0gramm.com/user/johndoe"
+        },
+        {
+          "site": "sessionize",
+          "url": "https://sessionize.com/johndoe"
+        },
+        {
+          "site": "threads",
+          "url": "https://www.threads.net/@johndoe"
+        },
+        {
+          "site": "write.as",
+          "url": "https://write.as/johndoe"
+        },
+        {
+          "site": "Platzi",
+          "url": "https://platzi.com/p/johndoe/"
+        },
+        {
+          "site": "Wowhead",
+          "url": "https://wowhead.com/user=johndoe"
+        },
+        {
+          "site": "CurseForge",
+          "url": "https://www.curseforge.com/members/johndoe/projects"
+        }
+      ]
+    },
+    "domain_lookup": {
+      "source": "WHOIS + DNS",
+      "status": "ok",
+      "domain": "example.com",
+      "whois": {
+        "registrar": "RESERVED-Internet Assigned Numbers Authority",
+        "creation_date": "1995-08-14 04:00:00+00:00",
+        "expiration_date": "2027-08-13 04:00:00+00:00",
+        "name_servers": [
+          "ELLIOTT.NS.CLOUDFLARE.COM",
+          "HERA.NS.CLOUDFLARE.COM"
+        ],
+        "emails": null
+      },
+      "dns": {
+        "A": [
+          "172.66.147.243",
+          "104.20.23.154"
+        ],
+        "MX": [
+          "0 ."
+        ],
+        "NS": [
+          "hera.ns.cloudflare.com.",
+          "elliott.ns.cloudflare.com."
+        ],
+        "TXT": [
+          "\"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9\"",
+          "\"v=spf1 -all\""
+        ]
+      }
+    },
+    "phone_lookup": {
+      "source": "phonenumbers",
+      "status": "ok",
+      "e164": "+34612345678",
+      "country": "Spain",
+      "carrier": "Syma",
+      "line_type": "Mobile"
+    },
+    "email_breach": {
+      "source": "XposedOrNot",
+      "status": "ok",
+      "breaches_found": 64,
+      "breaches": [
+        "Zynga",
+        "NetEase",
+        "Snail",
+        "Chegg",
+        "Charter",
+        "Patreon",
+        "GameSprite",
+        "Luxottica",
+        "Naz.API",
+        "ClearvoiceSurveys",
+        "Adobe",
+        "Wishbone",
+        "Disqus",
+        "Cit0day",
+        "Payhere",
+        "AlienStealerLogs",
+        "R2games",
+        "GameSalad",
+        "Promo",
+        "MyVidster-2025",
+        "ExploitIN",
+        "Uuu9",
+        "LinkedIn",
+        "BureauvanDijk",
+        "Factual",
+        "CentralTickets",
+        "Trello",
+        "Deezer",
+        "Wanelo",
+        "Animoto",
+        "AntiPublicCombo",
+        "ToonDoo",
+        "Verifications",
+        "1.4BillionRecords",
+        "Collection-1",
+        "Gaadi",
+        "Canva",
+        "Promofarma",
+        "Ge.tt",
+        "Shein",
+        "ZenBusiness",
+        "ManchesterAirportsGroup",
+        "MyHeritage",
+        "MyFitnessPal",
+        "Wattpad",
+        "Dailymotion",
+        "Zacks",
+        "SwordFantasy",
+        "17173",
+        "YouthManual",
+        "Mathway",
+        "Epik",
+        "Ixigo",
+        "Tokopedia",
+        "Dropbox",
+        "Dubsmash",
+        "RentoMojo",
+        "Zacks-2024",
+        "Tumblr",
+        "OGUsers-2022",
+        "Whitepages",
+        "Twitter-Scraped",
+        "Wakanim",
+        "RingCentral"
+      ]
+    },
+    "name_dorks": {
+      "source": "Dork generator",
+      "status": "manual_followup",
+      "name": "John Doe",
+      "note": "These are search links for manual investigation, not automated results.",
+      "links": {
+        "Google": "https://www.google.com/search?q=%22John%20Doe%22",
+        "Google + LinkedIn": "https://www.google.com/search?q=%22John%20Doe%22+site:linkedin.com",
+        "Google + social media": "https://www.google.com/search?q=%22John%20Doe%22+(site:twitter.com+OR+site:facebook.com+OR+site:instagram.com)",
+        "Google + documents": "https://www.google.com/search?q=%22John%20Doe%22+filetype:pdf"
+      }
+    }
+  },
+  "relations": [
+    "The email 'johndoe@example.com' belongs to the investigated domain 'example.com'.",
+    "The email local part matches the username 'johndoe' (likely same person).",
+    "The username 'johndoe' exists on 213 sites (9GAG, About.me, Airbit, AllMyLinks, AniWorld and 208 more); these may be the same person across networks.",
+    "The email 'johndoe@example.com' appears in 64 known data breaches."
+  ],
+  "errors": []
+}

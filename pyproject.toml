@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oomysint"
+version = "0.1.0"
+description = "Modular OSINT CLI for digital footprint reconnaissance."
+requires-python = ">=3.9"
+dependencies = [
+    "requests",
+    "python-whois",
+    "dnspython",
+    "phonenumbers",
+    "python-dotenv",
+]
+
+[project.scripts]
+oomysint = "main:main"
+
+[tool.setuptools]
+py-modules = ["main", "report"]
+packages = ["modules"]
