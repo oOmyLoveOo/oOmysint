@@ -27,6 +27,20 @@ def find_relations(targets, results):
         if email.lower() in (e.lower() for e in whois_emails):
             relations.append(f"The email '{email}' appears as a contact in the WHOIS record of '{domain}'.")
 
+    # theHarvester: public emails found for the domain, compared with the
+    # email and username targets.
+    harvested = results.get("harvester_lookup", {}).get("emails") or []
+    if email and email.lower() in harvested:
+        relations.append(f"The email '{email}' is publicly exposed (found by theHarvester for '{domain}').")
+    if username:
+        matches = [e for e in harvested if e.partition("@")[0] == username.lower()]
+        for match in matches:
+            if match != (email or "").lower():
+                relations.append(
+                    f"theHarvester found '{match}', whose local part matches the username '{username}' "
+                    "(possible additional email of the same person)."
+                )
+
     profiles = results.get("username_lookup", {}).get("profiles") or []
     if len(profiles) > 1:
         sites = ", ".join(p["site"] for p in profiles[:5])

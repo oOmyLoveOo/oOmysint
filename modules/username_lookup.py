@@ -8,10 +8,13 @@ import re
 import shutil
 import subprocess
 
+import config
+
 _FOUND_RE = re.compile(r"^\[\+\]\s*([^:]+):\s*(\S+)")
 
 
-def check_username(username, timeout=30):
+def check_username(username, timeout=None):
+    timeout = timeout or config.SHERLOCK_TIMEOUT
     sherlock_bin = shutil.which("sherlock")
     if not sherlock_bin:
         return {
@@ -21,7 +24,8 @@ def check_username(username, timeout=30):
             "profiles": [],
         }
 
-    cmd = [sherlock_bin, username, "--timeout", "5", "--print-found", "--no-color"]
+    cmd = [sherlock_bin, username, "--timeout", str(config.SHERLOCK_SITE_TIMEOUT),
+           "--print-found", "--no-color"]
     try:
         proc = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
     except subprocess.TimeoutExpired:

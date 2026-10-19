@@ -10,11 +10,12 @@ import os
 
 import requests
 
+import config
 from .utils import is_valid_email
 
 _HIBP_URL = "https://haveibeenpwned.com/api/v3/breachedaccount/{}"
 _XON_URL = "https://api.xposedornot.com/v1/check-email/{}"
-_HEADERS = {"user-agent": "oOmysint-osint-tool"}
+_HEADERS = {"user-agent": config.USER_AGENT}
 
 
 def check_email(email):
@@ -30,7 +31,7 @@ def check_email(email):
 def _check_hibp(email, api_key):
     headers = {**_HEADERS, "hibp-api-key": api_key}
     try:
-        response = requests.get(_HIBP_URL.format(email), headers=headers, timeout=10)
+        response = requests.get(_HIBP_URL.format(email), headers=headers, timeout=config.HTTP_TIMEOUT)
     except requests.RequestException as exc:
         return {"source": "HaveIBeenPwned", "status": "error", "error": str(exc)}
 
@@ -46,7 +47,7 @@ def _check_hibp(email, api_key):
 
 def _check_xposedornot(email):
     try:
-        response = requests.get(_XON_URL.format(email), headers=_HEADERS, timeout=10)
+        response = requests.get(_XON_URL.format(email), headers=_HEADERS, timeout=config.HTTP_TIMEOUT)
         data = response.json()
     except (requests.RequestException, ValueError) as exc:
         return {"source": "XposedOrNot", "status": "error", "error": str(exc)}

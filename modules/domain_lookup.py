@@ -3,9 +3,8 @@
 import whois
 import dns.resolver
 
+import config
 from .utils import as_text
-
-_RECORD_TYPES = ("A", "MX", "NS", "TXT")
 
 
 def analyze_domain(domain):
@@ -25,9 +24,9 @@ def analyze_domain(domain):
         result["whois_error"] = str(exc)
 
     dns_records = {}
-    for record_type in _RECORD_TYPES:
+    for record_type in config.DNS_RECORD_TYPES:
         try:
-            answers = dns.resolver.resolve(domain, record_type, lifetime=5)
+            answers = dns.resolver.resolve(domain, record_type, lifetime=config.DNS_TIMEOUT)
             dns_records[record_type] = [r.to_text() for r in answers]
         except Exception:
             dns_records[record_type] = []

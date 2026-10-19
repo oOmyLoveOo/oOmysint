@@ -5,6 +5,9 @@ Usage examples:
     oomysint --username johndoe
     oomysint --domain example.com --email john@example.com
     oomysint --phone "+1 202-555-0178" --name "John Doe" -oA report
+
+Flow: validate inputs -> run every registered module for the given inputs
+(modules.MODULES) -> correlate results -> write console / JSON / HTML / graph.
 """
 
 import argparse
@@ -13,9 +16,11 @@ import sys
 
 from dotenv import load_dotenv
 
+import config
+import graph
 import report
-from modules import correlation, domain_lookup, email_breach, name_dorks, phone_lookup, username_lookup
-from modules.utils import is_valid_domain, is_valid_email, is_valid_username, normalize_domain
+from modules import MODULES, correlation
+from modules.utils import INPUT_TYPES
 
 
 def parse_args():
@@ -23,7 +28,7 @@ def parse_args():
         description="oOmysint: modular OSINT CLI for digital footprint recon.",
     )
     parser.add_argument("-u", "--username", help="Username to search across social networks (via Sherlock)")
-    parser.add_argument("-d", "--domain", help="Domain to analyze via WHOIS + DNS")
+    parser.add_argument("-d", "--domain", help="Domain to analyze via WHOIS + DNS and theHarvester")
     parser.add_argument("-p", "--phone", help="Phone number in international format (e.g. +1 202-555-0178)")
     parser.add_argument("-e", "--email", help="Email to check for data breaches (HIBP or XposedOrNot)")
     parser.add_argument("-n", "--name", help="Full name to generate manual-lookup dorks for")
@@ -33,18 +38,20 @@ def parse_args():
     )
     output.add_argument("-oJ", dest="output_json", metavar="FILE", help="Write the JSON report to FILE")
     output.add_argument("-oH", dest="output_html", metavar="FILE", help="Write the HTML report to FILE")
+    output.add_argument("-oG", dest="output_graph", metavar="BASENAME",
+                        help="Write the relations graph as BASENAME.dot (+ BASENAME.png with Graphviz)")
     output.add_argument(
         "-oA",
         dest="output_all",
         metavar="BASENAME",
-        help="Write both formats at once, as BASENAME.json and BASENAME.html",
+        help="Write everything at once: BASENAME.json, BASENAME.html and the graph",
     )
 
     parser.add_argument(
         "--sherlock-timeout",
         type=int,
-        default=120,
-        help="Timeout in seconds for the Sherlock subprocess (default: 120)",
+        default=config.SHERLOCK_TIMEOUT,
+        help=f"Timeout in seconds for the Sherlock subprocess (default: {config.SHERLOCK_TIMEOUT})",
     )
     return parser.parse_args()
 
@@ -55,99 +62,82 @@ def _ensure_parent_dir(path):
         os.makedirs(parent, exist_ok=True)
 
 
+def collect_targets(args, errors):
+    """Normalizes and validates every input given on the command line.
+
+    Invalid inputs are recorded in `errors` and skipped, so the other
+    modules still run.
+    """
+    targets = {}
+    for kind, (normalize, validate, hint) in INPUT_TYPES.items():
+        raw = getattr(args, kind)
+        if raw is None:
+            continue
+        value = normalize(raw)
+        if validate(value):
+            targets[kind] = value
+        else:
+            errors.append(f"Invalid {kind}: '{raw}' ({hint})")
+    return targets
+
+
+def run_modules(targets, errors):
+    """Runs every registered module whose input type is among the targets."""
+    results = {}
+    for result_key, input_kind, lookup, message in MODULES:
+        value = targets.get(input_kind)
+        if value is None:
+            continue
+        print(f"[*] {message} '{value}'...")
+        try:
+            results[result_key] = lookup(value)
+        except Exception as exc:  # a broken module must not stop the others
+            errors.append(f"{result_key} failed: {exc}")
+    return results
+
+
 def main():
     load_dotenv()
     args = parse_args()
+    config.SHERLOCK_TIMEOUT = args.sherlock_timeout
 
-    if not any([args.username, args.domain, args.phone, args.email, args.name]):
+    if not any(getattr(args, kind) for kind in INPUT_TYPES):
         print(
             "Error: provide at least one target (--username, --domain, --phone, --email or --name).",
             file=sys.stderr,
         )
         sys.exit(1)
 
-    targets = {}
-    results = {}
     errors = []
-
-    if args.username:
-        if not is_valid_username(args.username):
-            errors.append(f"Invalid username: '{args.username}'")
-        else:
-            targets["username"] = args.username
-            print(f"[*] Running Sherlock for username '{args.username}'...")
-            try:
-                results["username_lookup"] = username_lookup.check_username(
-                    args.username, timeout=args.sherlock_timeout
-                )
-            except Exception as exc:
-                errors.append(f"username_lookup failed: {exc}")
-
-    if args.domain:
-        domain = normalize_domain(args.domain)
-        if not is_valid_domain(domain):
-            errors.append(f"Invalid domain: '{args.domain}'")
-        else:
-            targets["domain"] = domain
-            print(f"[*] Running WHOIS + DNS for domain '{domain}'...")
-            try:
-                results["domain_lookup"] = domain_lookup.analyze_domain(domain)
-            except Exception as exc:
-                errors.append(f"domain_lookup failed: {exc}")
-
-    if args.phone:
-        targets["phone"] = args.phone
-        print(f"[*] Analyzing phone number '{args.phone}'...")
-        try:
-            results["phone_lookup"] = phone_lookup.analyze_phone(args.phone)
-        except Exception as exc:
-            errors.append(f"phone_lookup failed: {exc}")
-
-    if args.email:
-        if not is_valid_email(args.email):
-            errors.append(f"Invalid email: '{args.email}'")
-        else:
-            targets["email"] = args.email
-            print(f"[*] Checking data breaches for '{args.email}'...")
-            try:
-                results["email_breach"] = email_breach.check_email(args.email)
-            except Exception as exc:
-                errors.append(f"email_breach failed: {exc}")
-
-    if args.name:
-        targets["name"] = args.name
-        print(f"[*] Generating lookup dorks for '{args.name}'...")
-        try:
-            results["name_dorks"] = name_dorks.generate_dorks(args.name)
-        except Exception as exc:
-            errors.append(f"name_dorks failed: {exc}")
-
+    targets = collect_targets(args, errors)
+    results = run_modules(targets, errors)
     relations = correlation.find_relations(targets, results)
     report_data = report.build_report(targets, results, relations, errors)
 
-    wrote_file = False
-    if args.output_json:
-        _ensure_parent_dir(args.output_json)
-        report.write_json(report_data, args.output_json)
-        print(f"[+] JSON report written to {args.output_json}")
-        wrote_file = True
+    json_path = args.output_json or (f"{args.output_all}.json" if args.output_all else None)
+    html_path = args.output_html or (f"{args.output_all}.html" if args.output_all else None)
+    graph_base = args.output_graph or args.output_all
 
-    if args.output_html:
-        _ensure_parent_dir(args.output_html)
-        report.write_html(report_data, args.output_html)
-        print(f"[+] HTML report written to {args.output_html}")
-        wrote_file = True
+    # The graph goes first so the HTML report can embed its PNG.
+    if graph_base:
+        _ensure_parent_dir(graph_base)
+        dot_path, png_path, graph_error = graph.write_graph(report_data, graph_base)
+        print(f"[+] Relations graph written to {dot_path}" + (f" and {png_path}" if png_path else ""))
+        if graph_error:
+            errors.append(graph_error)
+        report_data["graph"] = png_path
 
-    if args.output_all:
-        json_path = f"{args.output_all}.json"
-        html_path = f"{args.output_all}.html"
+    if json_path:
         _ensure_parent_dir(json_path)
         report.write_json(report_data, json_path)
-        report.write_html(report_data, html_path)
         print(f"[+] JSON report written to {json_path}")
-        print(f"[+] HTML report written to {html_path}")
-        wrote_file = True
 
+    if html_path:
+        _ensure_parent_dir(html_path)
+        report.write_html(report_data, html_path)
+        print(f"[+] HTML report written to {html_path}")
+
+    wrote_file = bool(json_path or html_path or graph_base)
     if not wrote_file:
         print()
         report.print_console(report_data)

@@ -2,6 +2,7 @@
 
 import html
 import json
+import os
 
 from modules.utils import now_iso
 
@@ -32,6 +33,7 @@ def build_report(targets, results, relations, errors):
         "results": results,
         "relations": relations,
         "errors": errors,
+        "graph": None,  # path of the rendered relations graph (PNG), if any
     }
 
 
@@ -41,8 +43,12 @@ def write_json(report_data, path):
 
 
 def write_html(report_data, path):
+    # The graph image is referenced relative to the HTML file's folder.
+    graph_src = None
+    if report_data.get("graph"):
+        graph_src = os.path.relpath(report_data["graph"], os.path.dirname(os.path.abspath(path)))
     with open(path, "w", encoding="utf-8") as f:
-        f.write(_render_html(report_data))
+        f.write(_render_html(report_data, graph_src))
 
 
 def print_console(report_data):
@@ -141,7 +147,7 @@ def _render_module(key, data):
     """
 
 
-def _render_html(report_data):
+def _render_html(report_data, graph_src=None):
     targets = report_data["targets"]
     target_items = "".join(
         f"<li><strong>{html.escape(k)}:</strong> {html.escape(str(v))}</li>"
@@ -154,6 +160,16 @@ def _render_html(report_data):
     if not relation_items:
         relation_items = '<li class="muted">No relations found between the targets.</li>'
     relations_html = f'<section class="module"><h2>Relations found</h2><ul>{relation_items}</ul></section>'
+
+    graph_html = ""
+    if graph_src:
+        safe_src = html.escape(graph_src)
+        graph_html = (
+            '<section class="module"><h2>Relations graph</h2>'
+            f'<a href="{safe_src}" target="_blank"><img class="graph" src="{safe_src}" alt="Relations graph"></a>'
+            '<p class="muted">Dashed red edges are correlations between inputs; '
+            "the rest are findings of each module.</p></section>"
+        )
 
     errors_html = ""
     if report_data["errors"]:
@@ -180,6 +196,7 @@ def _render_html(report_data):
   ul {{ margin: 0.2rem 0 0.2rem 1.1rem; }}
   .muted {{ color: #6b7280; }}
   .limitations {{ font-size: 0.9rem; color: #c8c8c8; }}
+  img.graph {{ max-width: 100%; max-height: 600px; display: block; margin: 0 auto; border-radius: 6px; }}
 </style>
 </head>
 <body>
@@ -190,6 +207,7 @@ def _render_html(report_data):
     <ul>{target_items}</ul>
   </section>
   {relations_html}
+  {graph_html}
   {modules_html}
   {errors_html}
   <section class="module limitations">
@@ -199,6 +217,7 @@ def _render_html(report_data):
       <li>Email breaches come from HaveIBeenPwned if a key is configured, otherwise from the free XposedOrNot API; both only know publicly disclosed breaches.</li>
       <li>Relations are simple string matches (hints), not proof that accounts belong to the same person.</li>
       <li>WHOIS data availability varies by registrar and may be partially redacted (GDPR/privacy proxies).</li>
+      <li>theHarvester only uses passive, keyless sources (see config.py); results depend on what those third-party databases have indexed, and long lists are truncated.</li>
       <li>Full-name search only produces manual-lookup links; it is not an automated data source.</li>
       <li>This tool is intended for educational and authorized OSINT use only.</li>
     </ul>

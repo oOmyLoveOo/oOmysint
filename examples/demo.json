@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-14T17:25:29.803988+00:00",
+  "generated_at": "2026-10-19T17:47:11.216366+00:00",
   "targets": {
     "username": "johndoe",
+    "email": "johndoe@example.com",
     "domain": "example.com",
     "phone": "+34 612345678",
-    "email": "johndoe@example.com",
     "name": "John Doe"
   },
   "results": {
@@ -12,7 +12,7 @@
       "source": "Sherlock",
       "status": "ok",
       "username": "johndoe",
-      "profiles_found": 213,
+      "profiles_found": 211,
       "profiles": [
         {
           "site": "9GAG",
@@ -83,12 +83,12 @@
           "url": "https://buymeacoff.ee/johndoe"
         },
         {
-          "site": "Cfx.re Forum",
-          "url": "https://forum.cfx.re/u/johndoe/summary"
+          "site": "BuzzFeed",
+          "url": "https://buzzfeed.com/johndoe"
         },
         {
-          "site": "CGTrader",
-          "url": "https://www.cgtrader.com/johndoe"
+          "site": "Cfx.re Forum",
+          "url": "https://forum.cfx.re/u/johndoe/summary"
         },
         {
           "site": "Carbonmade",
@@ -199,10 +199,6 @@
           "url": "https://johndoe.empretienda.com.ar"
         },
         {
-          "site": "Exposure",
-          "url": "https://johndoe.exposure.co/"
-        },
-        {
           "site": "exophase",
           "url": "https://www.exophase.com/user/johndoe/"
         },
@@ -233,6 +229,10 @@
         {
           "site": "Freesound",
           "url": "https://freesound.org/people/johndoe/"
+        },
+        {
+          "site": "GNOME VCS",
+          "url": "https://gitlab.gnome.org/johndoe"
         },
         {
           "site": "Genius (Artists)",
@@ -387,10 +387,6 @@
           "url": "https://launchpad.net/~johndoe"
         },
         {
-          "site": "Lichess",
-          "url": "https://lichess.org/@/johndoe"
-        },
-        {
           "site": "Listed",
           "url": "https://listed.to/@johndoe"
         },
@@ -447,10 +443,6 @@
           "url": "https://www.openstreetmap.org/user/johndoe"
         },
         {
-          "site": "Pastebin",
-          "url": "https://pastebin.com/u/johndoe"
-        },
-        {
           "site": "Patreon",
           "url": "https://www.patreon.com/johndoe"
         },
@@ -473,10 +465,6 @@
         {
           "site": "PepperPL",
           "url": "https://www.pepper.pl/profile/johndoe"
-        },
-        {
-          "site": "PepperealsUS",
-          "url": "https://www.pepperdeals.com/profile/johndoe"
         },
         {
           "site": "Promodescuentos",
@@ -563,10 +551,6 @@
           "url": "https://speakerdeck.com/johndoe"
         },
         {
-          "site": "Speedrun.com",
-          "url": "https://speedrun.com/users/johndoe"
-        },
-        {
           "site": "Star Citizen",
           "url": "https://robertsspaceindustries.com/citizens/johndoe"
         },
@@ -627,6 +611,10 @@
           "url": "https://forums.terraria.org/index.php?search/42798315/&c[users]=johndoe&o=relevance"
         },
         {
+          "site": "ThemeForest",
+          "url": "https://themeforest.net/user/johndoe"
+        },
+        {
           "site": "tistory",
           "url": "https://johndoe.tistory.com/"
         },
@@ -669,6 +657,10 @@
         {
           "site": "VK",
           "url": "https://vk.com/johndoe"
+        },
+        {
+          "site": "Velog",
+          "url": "https://velog.io/@johndoe/posts"
         },
         {
           "site": "Venmo",
@@ -753,6 +745,10 @@
         {
           "site": "devRant",
           "url": "https://devrant.com/users/johndoe"
+        },
+        {
+          "site": "drive2",
+          "url": "https://www.drive2.ru/users/johndoe"
         },
         {
           "site": "eintracht",
@@ -861,11 +857,78 @@
         {
           "site": "Wowhead",
           "url": "https://wowhead.com/user=johndoe"
-        },
-        {
-          "site": "CurseForge",
-          "url": "https://www.curseforge.com/members/johndoe/projects"
         }
+      ]
+    },
+    "email_breach": {
+      "source": "XposedOrNot",
+      "status": "ok",
+      "breaches_found": 64,
+      "breaches": [
+        "MyFitnessPal",
+        "Patreon",
+        "Naz.API",
+        "Charter",
+        "1.4BillionRecords",
+        "17173",
+        "Zacks-2024",
+        "MyHeritage",
+        "Disqus",
+        "ToonDoo",
+        "Gaadi",
+        "Promo",
+        "Animoto",
+        "Twitter-Scraped",
+        "R2games",
+        "Promofarma",
+        "AlienStealerLogs",
+        "Dropbox",
+        "Factual",
+        "Wattpad",
+        "ManchesterAirportsGroup",
+        "Collection-1",
+        "Zacks",
+        "Tokopedia",
+        "Wakanim",
+        "YouthManual",
+        "GameSalad",
+        "Dailymotion",
+        "ZenBusiness",
+        "NetEase",
+        "Ixigo",
+        "Wanelo",
+        "ExploitIN",
+        "Verifications",
+        "BureauvanDijk",
+        "Trello",
+        "ClearvoiceSurveys",
+        "Epik",
+        "Mathway",
+        "LinkedIn",
+        "Payhere",
+        "GameSprite",
+        "Cit0day",
+        "Chegg",
+        "CentralTickets",
+        "MyVidster-2025",
+        "SwordFantasy",
+        "Zynga",
+        "RingCentral",
+        "Luxottica",
+        "Shein",
+        "OGUsers-2022",
+        "RentoMojo",
+        "Wishbone",
+        "Deezer",
+        "Whitepages",
+        "Adobe",
+        "Ge.tt",
+        "Snail",
+        "Canva",
+        "Dubsmash",
+        "Tumblr",
+        "AntiPublicCombo",
+        "Uuu9"
       ]
     },
     "domain_lookup": {
@@ -884,8 +947,8 @@
       },
       "dns": {
         "A": [
-          "172.66.147.243",
-          "104.20.23.154"
+          "104.20.23.154",
+          "172.66.147.243"
         ],
         "MX": [
           "0 ."
@@ -895,10 +958,74 @@
           "elliott.ns.cloudflare.com."
         ],
         "TXT": [
-          "\"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9\"",
-          "\"v=spf1 -all\""
+          "\"v=spf1 -all\"",
+          "\"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9\""
         ]
       }
+    },
+    "harvester_lookup": {
+      "source": "theHarvester",
+      "status": "ok",
+      "domain": "example.com",
+      "sources_used": "crtsh,hackertarget,duckduckgo",
+      "emails_found": 0,
+      "emails": [],
+      "hosts_found": 499,
+      "hosts": [
+        "0.example.com",
+        "09bc4233abde.example.com",
+        "1.example.com",
+        "1001.example.com",
+        "103-213-249-189.example.com",
+        "109199.example.com",
+        "110711.example.com",
+        "113326.example.com",
+        "12.example.com",
+        "120113.example.com",
+        "1207.example.com",
+        "123.example.com",
+        "123456.example.com",
+        "1234test.example.com",
+        "1270011721.example.com",
+        "12758xz-vpn.example.com",
+        "133175.example.com",
+        "134330.example.com",
+        "139520.example.com",
+        "14----apr----rrdd.example.com",
+        "155498.example.com",
+        "159322.example.com",
+        "161240.example.com",
+        "163986.example.com",
+        "164249.example.com",
+        "165756.example.com",
+        "1739squidsbased.example.com",
+        "174143.example.com",
+        "174162.example.com",
+        "174172.example.com",
+        "174327.example.com",
+        "174332.example.com",
+        "174342.example.com",
+        "174347.example.com",
+        "175122.example.com",
+        "175435.example.com",
+        "175440.example.com",
+        "175454.example.com",
+        "176-56-231-202.example.com",
+        "176118.example.com",
+        "176123.example.com",
+        "176948.example.com",
+        "176953.example.com",
+        "176958.example.com",
+        "177671.example.com",
+        "177676.example.com",
+        "178774.example.com",
+        "17992.example.com",
+        "179958.example.com",
+        "180020.example.com"
+      ],
+      "ips_found": 0,
+      "ips": [],
+      "truncated": true
     },
     "phone_lookup": {
       "source": "phonenumbers",
@@ -907,77 +1034,6 @@
       "country": "Spain",
       "carrier": "Syma",
       "line_type": "Mobile"
-    },
-    "email_breach": {
-      "source": "XposedOrNot",
-      "status": "ok",
-      "breaches_found": 64,
-      "breaches": [
-        "Zynga",
-        "NetEase",
-        "Snail",
-        "Chegg",
-        "Charter",
-        "Patreon",
-        "GameSprite",
-        "Luxottica",
-        "Naz.API",
-        "ClearvoiceSurveys",
-        "Adobe",
-        "Wishbone",
-        "Disqus",
-        "Cit0day",
-        "Payhere",
-        "AlienStealerLogs",
-        "R2games",
-        "GameSalad",
-        "Promo",
-        "MyVidster-2025",
-        "ExploitIN",
-        "Uuu9",
-        "LinkedIn",
-        "BureauvanDijk",
-        "Factual",
-        "CentralTickets",
-        "Trello",
-        "Deezer",
-        "Wanelo",
-        "Animoto",
-        "AntiPublicCombo",
-        "ToonDoo",
-        "Verifications",
-        "1.4BillionRecords",
-        "Collection-1",
-        "Gaadi",
-        "Canva",
-        "Promofarma",
-        "Ge.tt",
-        "Shein",
-        "ZenBusiness",
-        "ManchesterAirportsGroup",
-        "MyHeritage",
-        "MyFitnessPal",
-        "Wattpad",
-        "Dailymotion",
-        "Zacks",
-        "SwordFantasy",
-        "17173",
-        "YouthManual",
-        "Mathway",
-        "Epik",
-        "Ixigo",
-        "Tokopedia",
-        "Dropbox",
-        "Dubsmash",
-        "RentoMojo",
-        "Zacks-2024",
-        "Tumblr",
-        "OGUsers-2022",
-        "Whitepages",
-        "Twitter-Scraped",
-        "Wakanim",
-        "RingCentral"
-      ]
     },
     "name_dorks": {
       "source": "Dork generator",
@@ -995,8 +1051,9 @@
   "relations": [
     "The email 'johndoe@example.com' belongs to the investigated domain 'example.com'.",
     "The email local part matches the username 'johndoe' (likely same person).",
-    "The username 'johndoe' exists on 213 sites (9GAG, About.me, Airbit, AllMyLinks, AniWorld and 208 more); these may be the same person across networks.",
+    "The username 'johndoe' exists on 211 sites (9GAG, About.me, Airbit, AllMyLinks, AniWorld and 206 more); these may be the same person across networks.",
     "The email 'johndoe@example.com' appears in 64 known data breaches."
   ],
-  "errors": []
+  "errors": [],
+  "graph": "examples/graph.png"
 }
